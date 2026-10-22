@@ -1,0 +1,24 @@
+{
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.recipes": [
+    { "name": "Laborprotokoll bauen", "tools": ["projekt-build"] }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "projekt-build",
+      "command": "/bin/sh",
+      "args": ["%DIR%/scripts/build.sh"]
+    }
+  ],
+  "latex-workshop.view.pdf.viewer": "tab",
+  "files.exclude": {
+    "**/.tools": true,
+    "**/build/*.aux": true,
+    "**/build/*.log": true,
+    "**/build/*.out": true,
+    "**/build/*.toc": true,
+    "**/build/*.synctex.gz": true
+  }
+}

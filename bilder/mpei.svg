@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="458" viewBox="0 0 1200 458">
+  <title>Logo</title>
+  <desc>Vektornachzeichnung der Bildvorlage mit orangefarbenem abgerundetem Rechteck und weißem Schriftzug.</desc>
+  <rect width="1200" height="458" fill="#ffffff"/>
+  <rect x="8" y="7.3" width="1180" height="442.5" rx="45.4" fill="#ed6b22"/>
+  <g fill="#fdffff">
+    <path d="M81.9 81H142.4L229.5 203.9 316.7 81H377L229.5 289.7 131.1 154.4V375.9H81.9Z"/>
+    <path d="M327.8 235.2 377 165.6V375.9H327.8Z"/>
+    <path d="M475.4 81H573.7C627.9 81 671.7 125 671.7 179.4S627.9 277.7 573.7 277.7H524.5V375.9H475.4V228.5H573.7C600.8 228.5 622.9 206.5 622.9 179.4S600.8 130.1 573.7 130.1H475.4Z"/>
+    <path d="M770.3 81H967V130.1H770.3ZM770.3 203.8H917.8V253H770.3ZM770.3 326.7H967V375.9H770.3Z"/>
+    <path d="M1065.4 81H1114.6V375.9H1065.4Z"/>
+  </g>
+</svg>

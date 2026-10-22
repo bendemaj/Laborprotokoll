@@ -1,0 +1,81 @@
+% !TeX root = ../main.tex
+% Kompakte Beispielseite; verwendet die Pakete aus vorlage/praeambel.tex.
+\section{LaTeX-Beispiele}
+\label{sec:beispiele}
+\begingroup
+\small
+
+\subsection{Text, Listen und Verweise}
+Text kann \textbf{fett}, \textit{kursiv}, \underline{unterstrichen},
+\texttt{in Schreibmaschinenschrift} oder \textcolor{Akzent}{farbig} sein.
+Sonderzeichen: \verb|\% \& \_ \#| ergeben \%, \&, \_, \#.
+Eine Fußnote\footnote{Hier steht eine ergänzende Erklärung.} und ein
+\href{https://www.latex-project.org/}{Link zum LaTeX-Projekt} ergänzen den Text.
+
+\noindent
+\begin{minipage}[t]{0.48\linewidth}
+  \begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item Stichpunkt mit \emph{Betonung}
+    \item Messwert: \qty{12.5}{\volt}
+  \end{itemize}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+  \begin{enumerate}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item Versuchsaufbau prüfen
+    \item Messung durchführen
+  \end{enumerate}
+\end{minipage}
+
+\subsection{Formeln und Einheiten}
+Im Fließtext gilt $U=R\cdot I$; Indizes und Potenzen schreibt man als
+$U_{\mathrm{eff}}$ und $x^2$. Eine nummerierte Gleichung:
+\begin{equation}
+  R=\frac{U}{I},\qquad
+  \overline{x}=\frac{1}{n}\sum_{i=1}^{n}x_i,\qquad
+  \sigma=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i-\overline{x})^2}.
+  \label{eq:auswertung}
+\end{equation}
+Einheiten und Unsicherheiten: $R=\qty{100.0 +- 0.5}{\ohm}$,
+$I=\qty{25}{\milli\ampere}$ und $T=\qty{23}{\degreeCelsius}$.
+
+\subsection{Tabelle und Abbildung}
+% Ohne Gleitumgebungen bleiben beide Beispiele an dieser Stelle.
+\noindent
+\begin{minipage}[t]{0.48\linewidth}
+  \centering
+  \captionof{table}{Beispielmesswerte}
+  \label{tab:messwerte}
+  \begin{tabular}{@{}rSS@{}}
+    \toprule
+    Nr. & {$U$ in \unit{\volt}} & {$I$ in \unit{\milli\ampere}} \\
+    \midrule
+    1 & 1.0 & 10.0 \\
+    2 & 2.0 & 20.1 \\
+    3 & 3.0 & 29.9 \\
+    \bottomrule
+  \end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+  \centering
+  \vspace{0pt}
+  \fbox{\parbox[c][17mm][c]{0.85\linewidth}{\centering
+    Platzhalter für ein Bild\\[2pt]
+    \footnotesize\texttt{\string\includegraphics[width=\string\linewidth]}\\
+    \texttt{\{dateiname\}}}}
+  \captionof{figure}{Beispiel einer Bildunterschrift}
+  \label{fig:beispiel}
+\end{minipage}
+
+Automatische Querverweise: \cref{eq:auswertung,tab:messwerte,fig:beispiel}.
+Mit \verb|\label{...}| wird eine Marke gesetzt, mit \verb|\cref{...}| darauf verwiesen.
+
+\subsection{Quelltext}
+\begin{verbatim}
+\textbf{Fetter Text}     % Kommentar im Quelltext
+\qty{4.7}{\kilo\ohm}    % Zahlenwert mit Einheit
+\end{verbatim}
+\endgroup

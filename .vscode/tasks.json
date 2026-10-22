@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Laborprotokoll: PDF erstellen",
+      "type": "process",
+      "command": "/bin/sh",
+      "args": ["${workspaceFolder}/scripts/build.sh"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    }
+  ]
+}

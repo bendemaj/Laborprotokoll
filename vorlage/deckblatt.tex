@@ -1,0 +1,49 @@
+% !TeX root = ../main.tex
+\begin{titlepage}
+  \thispagestyle{empty}
+  {\sffamily
+  \setlength{\parfillskip}{0pt plus 1fil}
+  \noindent\begin{minipage}[t]{0.72\textwidth}
+    \vspace{0pt}
+    {\large\bfseries \Hochschule\par}
+    \smallskip
+    {\color{Hinweisgrau}\Institut\par}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.24\textwidth}
+    \vspace{0pt}
+    \raggedleft
+    \ifdefempty{\Logodatei}{}{%
+      \IfFileExists{\Logodatei}{%
+        \includegraphics[width=\linewidth,height=20mm,keepaspectratio]{\Logodatei}%
+      }{\textcolor{Hinweisgrau}{\small Logo fehlt}}
+    }
+  \end{minipage}\par
+  \vspace{23mm}
+  {\noindent\color{Akzent}\rule{\textwidth}{1.4pt}\par}
+  \vspace{7mm}
+  {\large\color{Akzent}\MakeUppercase{Laborprotokoll}\par}
+  \vspace{5mm}
+  {\Huge\bfseries \Versuchsnummer\par}
+  \vspace{4mm}
+  {\LARGE\bfseries \Versuchstitel\par}
+  \vspace{4mm}
+  {\large\color{Hinweisgrau}\Versuchsuntertitel\par}
+  \vspace{9mm}
+  {\large\Lehrveranstaltung\par}
+  {\color{Hinweisgrau}\Semester\par}
+  \vfill
+  \renewcommand{\arraystretch}{1.55}
+  \begin{tabularx}{\textwidth}{@{}p{43mm}Y@{}}
+    \toprule
+    Verfasst von & \Verfasser \\
+    Matrikelnummer & \Matrikelnummer \\
+    Laborgruppe & \Laborgruppe \\
+    Laborpartner/innen & \Laborpartner \\
+    \midrule
+    Versuchsdatum & \Versuchsdatum \\
+    Abgabedatum & \Abgabedatum \\
+    \bottomrule
+  \end{tabularx}
+  \vspace{8mm}
+  }
+\end{titlepage}

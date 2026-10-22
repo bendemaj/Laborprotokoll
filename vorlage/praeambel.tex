@@ -1,0 +1,38 @@
+% !TeX root = ../main.tex
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\else
+  \usepackage{fontspec}
+\fi
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage[a4paper,left=27mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{microtype}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\graphicspath{{bilder/}}
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\sisetup{locale=DE,separate-uncertainty=true,per-mode=symbol}
+\DeclareSIUnit{\var}{var}
+\usepackage{booktabs,tabularx,array}
+\usepackage{xcolor}
+\definecolor{Akzent}{HTML}{204C60}
+\definecolor{Hinweisgrau}{HTML}{56616A}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\usepackage[automark]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ihead{\small\Lehrveranstaltung}
+\ohead{\small\Versuchsnummer}
+\cfoot{\pagemark}
+\KOMAoptions{headsepline=true,parskip=half}
+\setkomafont{disposition}{\normalfont\sffamily\bfseries\color{Akzent}}
+\setkomafont{pageheadfoot}{\normalfont\sffamily\small}
+\usepackage[hidelinks]{hyperref}
+\usepackage[ngerman,nameinlink,noabbrev]{cleveref}
+\newcommand{\platzhalter}[1]{\textit{\textcolor{Hinweisgrau}{[#1]}}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2em}

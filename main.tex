@@ -1,0 +1,18 @@
+% Deckblattdaten in protokolldaten.tex bearbeiten.
+\documentclass[11pt,a4paper]{scrartcl}
+\input{vorlage/praeambel}
+\input{protokolldaten}
+\hypersetup{pdftitle={Laborprotokoll \Versuchsnummer: \Versuchstitel},
+  pdfauthor={\Verfasser},pdfsubject={\Lehrveranstaltung}}
+\begin{document}
+\hypersetup{pageanchor=false}
+\input{vorlage/deckblatt}
+% Für spätere Inhalte die folgenden Zeilen aktivieren und die Datei anlegen:
+\pagenumbering{Roman}
+\hypersetup{pageanchor=true}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\pagestyle{scrheadings}
+\input{kapitel/protokoll}
+\end{document}
